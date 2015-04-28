@@ -1,0 +1,12 @@
+import javax.swing.JFrame;
+public class IGUI3 {
+   public static void main(String[] args) {
+   JFrame window = new JFrame("Everyday");
+   window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+   window.setSize(1440, 690);
+   window.setLocation(0, 0);
+   window.setContentPane(new EverydayPane());
+   window.pack();
+   window.setVisible(true);
+   }
+}

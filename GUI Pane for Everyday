@@ -1,0 +1,29 @@
+import javax.swing.JButton;
+import java.awt.Color;
+import java.awt.FlowLayout;
+import java.awt.Font;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+
+public class EverydayPane extends JPanel {
+
+private JLabel label;
+private JButton button;
+private JTextField textField;
+
+   public EverydayPane() {
+      setLayout(new FlowLayout());
+      
+      label = new JLabel("This is not a label");
+      label.setFont(new Font("Comic Sans", Font.BOLD, 20));
+      label.setForeground(Color.green);
+      add(label);
+      
+      button = new JButton("Can solve your problems");
+      add(button);
+      
+      textField = new JTextField("The button is too lazy to solve your problems.");
+      add(textField);
+      }
+   }

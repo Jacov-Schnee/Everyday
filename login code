@@ -1,0 +1,55 @@
+// To Do: Make Sign Up button with different window
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+class login extends JFrame implements ActionListener{
+   JTextField username = new JTextField("Username", 15);
+   JTextField password = new JTextField("Password", 15);
+   JButton login = new JButton("Login");
+   JLabel status = new JLabel("Not logged in");
+      
+   public login(){
+      super("Everyday Login");
+      setDefaultCloseOperation(JFrame.EXIT_ON_­CLOSE);
+      setSize(500, 500);
+      setLocation(400, 250);
+      GridBagLayout g = new GridBagLayout();
+      GridBagConstraints c = new GridBagConstraints();
+      setLayout(g);
+      c.gridx = 0;
+      c.gridy = 0;
+      add(username,c);
+      c.gridx = 0;
+      c.gridy = 1;
+      add(password,c);
+      c.gridx = 0;
+      c.gridy = 2;
+      add(login,c);
+      c.gridx = 0;
+      c.gridy = 3;
+      add(status,c);
+      login.addActionListener(this);
+      setVisible(true);
+      }
+      
+   public void actionPerformed(ActionEvent e) {
+      if(e.getSource() == login){
+         String user = username.getText();
+         String pass = password.getText();
+         if(user.equals("Schnee") && pass.equals("callum12")) { 
+            status.setText("Logged in");
+            // To Do: If logged in open new window with main program and close log in window
+         }
+         else { 
+            status.setText("Password or Username is incorrect");
+         }
+      }
+   }
+   
+   public static void main(String[] args){
+      login l = new login();
+      }
+   }
+
+  

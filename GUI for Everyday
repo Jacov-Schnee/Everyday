@@ -6,8 +6,8 @@ public class IGUI {
    window.setSize(1440, 865);
    window.setLocation(0, 0);
    window.setVisible(true);
-   // window.setContentPane(new MyPane1());
-   // window.pack();
-   // window.setVisible(true);
+   window.setContentPane(new login());
+   window.pack();
+   window.setVisible(true);
    }
 }

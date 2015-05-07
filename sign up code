@@ -10,6 +10,11 @@ class SignUp extends JFrame implements ActionListener {
    JPasswordField pass = new JPasswordField("Password", 20);
    JPasswordField cpass = new JPasswordField("Confirm Password", 20);
    
+   String user;    
+   String mail;
+   String password;
+   String password2;
+   
    JButton signup1 = new JButton("Sign Up");
        
    public SignUp(){
@@ -43,14 +48,16 @@ class SignUp extends JFrame implements ActionListener {
       }
     public void actionPerformed(ActionEvent e) {
       if(e.getSource() == signup1) {
-         String user = name2.getText();
-         String mail = email2.getText();
-         char[] password = pass.getPassword();
-         char[] password2 = cpass.getPassword();
-         String ans1 = new String(password);
-         String ans2 = new String(password2);
-         if(ans1.equals(ans2)) { 
+         user = name2.getText();
+         mail = email2.getText();
+         char[] passwordchar = pass.getPassword();
+         char[] passwordchar2 = cpass.getPassword();
+         password = new String(passwordchar);
+         password2 = new String(passwordchar2);
+         if(password.equals(password2)) { 
             JOptionPane.showMessageDialog(signup1, "Registration Successful");
+           
+            setVisible(false);
                      }
          else { 
             JOptionPane.showMessageDialog(signup1, "Passwords do not match");

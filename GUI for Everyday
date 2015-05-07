@@ -5,7 +5,7 @@ public class IGUI {
    window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
    window.setSize(1440, 865);
    window.setLocation(0, 0);
-   window.setVisible(true);
+   window.setVisible(false);
    window.setContentPane(new login());
    window.pack();
    window.setVisible(true);

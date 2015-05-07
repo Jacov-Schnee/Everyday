@@ -4,12 +4,16 @@ import java.awt.event.*;
 import javax.swing.JFrame;
 
 class login extends JFrame implements ActionListener {
+ 
    JTextField username = new JTextField("Username", 15);
    JPasswordField password = new JPasswordField("Password", 15);
    JButton login = new JButton("Login");
    JButton forgot = new JButton("Forgot Password?");
    JButton signup = new JButton("New? Sign Up Here");
    JLabel status = new JLabel("Not logged in"); 
+   
+   SignUp signUp;
+   IGUI igui;
        
    public login(){
       super("Everyday Login");
@@ -44,7 +48,7 @@ class login extends JFrame implements ActionListener {
    public void actionPerformed2(ActionEvent e) {
       if(e.getSource() == signup) {
          System.out.println("Sign-up button clicked");
-         new SignUp();
+         signUp = new SignUp();
                   }
       }
    public void actionPerformed3(ActionEvent g) {
@@ -56,8 +60,16 @@ class login extends JFrame implements ActionListener {
       if(e.getSource() == login) {
          String user = username.getText();
          String pass = password.getText();
-         if(user.equals("Schnee") && pass.equals("callum12")) { 
+         if(user.equals(signUp.user) && pass.equals(signUp.password)) { 
             status.setText("Logged in");
+            //igui = new IGUI();
+            setVisible(false); 
+            JFrame window = new JFrame("Everyday");
+            window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            window.setSize(1440, 865);
+            window.setLocation(0, 0);
+            window.setVisible(true);
+          
             //setDefaultCloseOperation(JFrame.EXIT);
             // To Do: If logged in open new window with main program and close log in window
          }
@@ -66,14 +78,16 @@ class login extends JFrame implements ActionListener {
          }
       }
       else if(e.getSource() == signup) {
-         new SignUp();
+         signUp = new SignUp();
+         //setVisible(false);
       }
    }
    
    public static void main(String[] args){
-      login l = new login();
+        new login();
       }
-   }
+  }     
+  
 
   
 

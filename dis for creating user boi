@@ -1,0 +1,53 @@
+import java.io.FileWriter;
+import java.io.PrintWriter;
+import java.io.IOException;
+import java.io.File;
+import java.io.BufferedWriter;
+
+public class PasswordFileManager {
+ 
+   public PasswordFileManager() {
+   
+   };
+   
+   public void createNewUser(String username, String password) throws Exception {
+      String path = ("/Users/suryadhir/Desktop/text.txt");
+      File f = new File(path);
+      PrintWriter writer = new PrintWriter(f);
+      writer.println("Callum");
+      writer.println("1999");
+      writer.close();
+      
+        
+   }
+   
+   public void confirmUser(String username, String password) {
+      
+   }
+   
+   public static void main(String[] args) throws Exception {
+      PasswordFileManager pass= new PasswordFileManager();
+      pass.createNewUser("Surya", "1998"); 
+   }
+  /*
+   public WriteFile(String filePath) {
+      path = filePath;
+   }
+
+   public WriteFile( String filePath, boolean appendValue ){
+      path = filePath;
+      appendToFile = appendValue;
+   }   
+
+
+   public void writeToFile(String textLine) throws IOException {
+   
+      FileWriter write = new FileWriter(path, appendToFile);
+      PrintWriter println = new PrintWriter(write);
+   
+      println.println(textLine);
+   
+      println.close;
+      /*/
+}
+     

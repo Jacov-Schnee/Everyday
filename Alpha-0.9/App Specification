@@ -1,0 +1,24 @@
+Everyday: The “Ültimate ASL” Organization App
+
+Developers:
+Jacov Pichougov
+Callum Hafner-Schnee
+Surya Dhir
+
+User:
+SLD
+
+Problem:
+Many people have problems with the organization of everyday school life, but for this project we have specifically chosen to focus on SLD to see whether or not our app helps our chosen test group. A lot of students (SLD students in particular) have problems organizing a timetable for their homework off of haiku. We think that the root of this problem is the fact that each subject has a different calendar, and the calendar with all of the homework assigned on it is too small and insignificant to be of any use. No program can currently help with this problem. ICalendar imports the compiled calendar but does not update it, meaning that you have to import your haiku calendar to ical every 2 days, which is a hassle. To solve this problem, we are making the app everyday. The goal of the app is to make organizing homework and other important dates easier for both SLD students or anyone else that happens to use haiku as a learning or organizational tool. 
+
+	SLD seemed the most logical choice for the test group for our app. They more so than others would require the use of organizational apps. They also have more difficulty organizing their time than other students. Obviously anybody could have served well for testing our app but SLD is a more focused group for the app. The app’s organisational features make it ideal for SLD students, all the information is in one place and then their lives are made easier because they can see clearly what they need to do each day and when they would need to do it. 
+App Description
+Everyday is an app that will help students organize and control their work for school. Using the app, students will be able to see their Haiku calendar with their homework (e.g., Chemistry, Math, etc..), incorporate a Self Control app which helps a student control their internet browsing during working time and make a list of the users most popular apps on a dashboard to make them more accessible. 
+
+The input for Everyday will be the Haiku calendar that will be imported from Haiku so it’s a direct feed to a student’s homework. The app will then display that information and allow the user to view it as well as use other commonly used websites which the user determines themselves. Everyday doesn’t have outputs besides all the separate function it has on the main window but those aren’t really outputs.
+
+We will likely have to create GUI’s for basically every output for the user to see. Classes aren’t as big of a problem as the GUI’s which need to somehow incorporate all the code for the separate functions we need the program to do. Most of this work will use core java classes that have been used in class, but we will likely need to use other more complicated code for the Haiku function of the program. 
+
+Documentation will allow future development of the app by us or by other coders. User documentation will allow SLD or any other user to navigate the program. 
+
+We plan on meeting with SLD and specifically Ms. Moyer repeatedly to check our code, making sure the app meets her and SLDs requirements.

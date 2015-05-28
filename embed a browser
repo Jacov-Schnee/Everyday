@@ -1,0 +1,19 @@
+import com.teamdev.jxbrowser.*;
+import org.slf4j.LoggerFactory;
+
+import javax.swing.*;
+import java.awt.*;
+
+public class BrowserSample{
+   public static void main(String[] args) throws Exception {
+      Browser browser = BrowserFactory.createBrowser(BrowserType.Mozilla);
+   
+      JFrame frame = new JFrame();
+      frame.add(browser.getComponent(), BorderLayout.CENTER);
+      frame.setSize(700, 500);
+      frame.setLocationRelativeTo(null);
+      frame.setVisible(true);
+   
+      browser.navigate("http://www.google.com");
+   }
+}

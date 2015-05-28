@@ -1,0 +1,12 @@
+import java.lang.Runtime;
+
+public class Chrome{
+
+   public static void main(String[]args) throws Exception{
+   
+   
+   String[] cmd = {"/usr/bin/open", "-a" , "Google Chrome",  "https://asl.haikulearning.com/do/account/login"};
+             Runtime.getRuntime().exec(cmd);
+      
+   }
+}

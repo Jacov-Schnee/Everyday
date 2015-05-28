@@ -1,0 +1,10 @@
+To have alpha version 0.9 work you must have all of these programs in the same folder, but you only have to run IGUI.java
+You will notice that the JFrame of the application still has the calendar and mail functions missing. 
+These will be added in the Beta update.
+The website blocker will only work on OSX due to the fact it uses SelfControl and SelfControl is a OSX-native app.
+To make the website blocker work, you must download SelfControl. Their website is here: http://selfcontrolapp.com/ 
+On OSX there are plans to make the program download SelfControl automatically, but that function will not be implemented until full release 1.0
+
+Good Luck with Everyday and tell us what problems there are with it. Thanks. 
+The_Schnee, Neo2511, suryad
+  

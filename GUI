@@ -1,0 +1,11 @@
+import javax.swing.JFrame; 
+public class MyGUI {
+
+   public static void main (String[]args){
+      JFrame window = new JFrame("Hello Window!");
+      window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+      window.setSize(400, 225);
+      window.setVisible(true);
+   
+   }
+}

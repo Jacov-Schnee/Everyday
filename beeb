@@ -1,0 +1,52 @@
+import java.awt.Desktop;
+import java.net.URI;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+
+class beeb extends JFrame implements ActionListener {
+   JButton yes = new JButton("Yes");
+   JButton no = new JButton("No");
+   JLabel status = new JLabel("Would you like Everyday to Save Your Password And Username?"); 
+   
+   SignUp2 signUp2; 
+   IGUI mainprogram;
+         
+   public beeb() {
+      super("Everyday Login");
+      setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+      setSize(500, 500);
+      setLocation(400, 250);
+      GridBagLayout g = new GridBagLayout();
+      GridBagConstraints c = new GridBagConstraints();
+      setLayout(g);
+      c.gridx = 0;
+      c.gridy = 1;
+      add(no,c);
+      c.gridx = 0;
+      c.gridy = 3;
+      add(yes,c);
+      c.gridx = 0;
+      c.gridy = 0;
+      add(status,c);
+      c.gridx = 0;
+      c.gridy = 4;
+      c.gridx = 0;
+      c.gridy = 5;
+      yes.addActionListener(this);
+      no.addActionListener(this);
+      setVisible(true);
+   }
+   public void actionPerformed(ActionEvent e) {
+      if(e.getSource() == no) {
+         Desktop d = Desktop.getDesktop();
+         d.browse(new URI("https://mail.asl.org/zimbra/#1"));
+         }
+   }
+   
+   public static void main(String[] args){
+      beeb l = new beeb();
+   }
+}

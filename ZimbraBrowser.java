@@ -7,16 +7,17 @@ import javafx.scene.Scene;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebEvent;
 import javafx.scene.web.WebView;
- 
+
 import javax.swing.*;
+
 import java.awt.*;
 import java.awt.event.*;
 import java.net.MalformedURLException;
 import java.net.URL;
- 
+
 import static javafx.concurrent.Worker.State.FAILED;
   
-public class Zimbra extends JFrame {
+public class ZimbraBrowser extends JPanel {
  
     private final JFXPanel jfxPanel = new JFXPanel();
     private WebEngine engine;
@@ -31,7 +32,7 @@ public class Zimbra extends JFrame {
  
   
     
-    public Zimbra() {
+    public ZimbraBrowser() {
         super();
         initComponents();
     }
@@ -55,20 +56,17 @@ public class Zimbra extends JFrame {
   
         
  
-        JPanel statusBar = new JPanel(new BorderLayout(5, 0));
-        statusBar.setBorder(BorderFactory.createEmptyBorder(3, 5, 3, 5));
-        statusBar.add(lblStatus, BorderLayout.CENTER);
-        statusBar.add(progressBar, BorderLayout.EAST);
+       
  
       
         panel.add(jfxPanel, BorderLayout.CENTER);
-        panel.add(statusBar, BorderLayout.SOUTH);
         
-        getContentPane().add(panel);
         
-        setPreferredSize(new Dimension(1024, 600));
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        pack();
+        this.add(panel);
+        
+        //setPreferredSize(new Dimension(1024, 600));
+       // setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        //pack();
 
     }
  
@@ -87,7 +85,7 @@ public class Zimbra extends JFrame {
                         SwingUtilities.invokeLater(new Runnable() {
                             @Override 
                             public void run() {
-                                Zimbra.this.setTitle(newValue);
+                                //HaikuBrowser.this.setTitle(newValue);
                             }
                         });
                     }
@@ -112,7 +110,7 @@ public class Zimbra extends JFrame {
                             @Override 
                             public void run() {
                                 txtURL.setText(newValue);
-                                txtURL.setVisible(false);
+                                txtURL.setVisible(true);
                             }
                         });
                     }
@@ -125,6 +123,7 @@ public class Zimbra extends JFrame {
                             @Override 
                             public void run() {
                                 progressBar.setValue(newValue.intValue());
+                                
                             }
                         });
                     }
@@ -179,17 +178,24 @@ public class Zimbra extends JFrame {
         }
     }
 
-   
+  
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
 
             public void run() {
                 HaikuBrowser browser = new HaikuBrowser();
-                browser.setVisible(true);
-                browser.loadURL("https://mail.asl.org/zimbra/");
+                JFrame window = new JFrame();
+                //Container panel= window.getContentPane();
+                //panel.add(browser);
+                
+                window.pack();
+                window.setVisible(true);
+                //browser.setVisible(true);
+                browser.loadURL("http://asl.haikulearning.com/do/account/login");
            }     
        });
     }
 }
+
 

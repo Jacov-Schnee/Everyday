@@ -91,9 +91,12 @@ Zimbra zimbra;
         jLabel1.setText("31/31/31");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-
+        
+        
+        
         Mail.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         Mail.setPreferredSize(new java.awt.Dimension(440, 865));
+        
         
         javax.swing.GroupLayout MailLayout = new javax.swing.GroupLayout(Mail);
         Mail.setLayout(MailLayout);
@@ -105,8 +108,10 @@ Zimbra zimbra;
             MailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 863, Short.MAX_VALUE)
         );
+       
         haikuBrowser = new HaikuBrowser();
         Mail = haikuBrowser;
+       
         haikuBrowser.loadURL("http://mail.asl.org/zimbra/#1");
         //Mail.addComponent(haikuBrowser);
         //Mail.addComponent(new JLabel("HEllo"));

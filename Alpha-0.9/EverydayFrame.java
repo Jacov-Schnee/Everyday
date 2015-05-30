@@ -1,18 +1,12 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-//package everyday;
-import java.util.*;
-/**
- *
- * @author CallumHafnerSchnee
- */
+import javax.swing.JLabel;
+
+
 public class EverydayFrame extends javax.swing.JFrame {
 
 String user;
 SelfControl selfControl;
+HaikuBrowser haikuBrowser;
+Zimbra zimbra;
     /**
      * Creates new form EverydayFrame
      */
@@ -100,7 +94,7 @@ SelfControl selfControl;
 
         Mail.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         Mail.setPreferredSize(new java.awt.Dimension(440, 865));
-
+        
         javax.swing.GroupLayout MailLayout = new javax.swing.GroupLayout(Mail);
         Mail.setLayout(MailLayout);
         MailLayout.setHorizontalGroup(
@@ -111,7 +105,11 @@ SelfControl selfControl;
             MailLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 863, Short.MAX_VALUE)
         );
-
+        haikuBrowser = new HaikuBrowser();
+        Mail = haikuBrowser;
+        haikuBrowser.loadURL("http://mail.asl.org/zimbra/#1");
+        //Mail.addComponent(haikuBrowser);
+        //Mail.addComponent(new JLabel("HEllo"));
         Calendar.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         Calendar.setPreferredSize(new java.awt.Dimension(1000, 800));
          
@@ -125,7 +123,10 @@ SelfControl selfControl;
             CalendarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 780, Short.MAX_VALUE)
         );
-
+        haikuBrowser = new HaikuBrowser();
+        Calendar = haikuBrowser;
+        haikuBrowser.loadURL("http://asl.haikulearning.com/do/account/login");
+        
         Username.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
 
         jLabel2.setText(""+GetCurrentDateAndTime.date());

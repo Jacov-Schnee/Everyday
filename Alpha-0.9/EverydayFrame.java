@@ -111,10 +111,8 @@ Zimbra zimbra;
        
         haikuBrowser = new HaikuBrowser();
         Mail = haikuBrowser;
-       
+        haikuBrowser.setPreferredSize(new java.awt.Dimension(440, 865));
         haikuBrowser.loadURL("http://mail.asl.org/zimbra/#1");
-        //Mail.addComponent(haikuBrowser);
-        //Mail.addComponent(new JLabel("HEllo"));
         Calendar.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         Calendar.setPreferredSize(new java.awt.Dimension(1000, 800));
          
@@ -130,6 +128,7 @@ Zimbra zimbra;
         );
         haikuBrowser = new HaikuBrowser();
         Calendar = haikuBrowser;
+        haikuBrowser.setPreferredSize(new java.awt.Dimension(1000,800));
         haikuBrowser.loadURL("http://asl.haikulearning.com/do/account/login");
         
         Username.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));

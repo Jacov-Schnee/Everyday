@@ -29,14 +29,6 @@ ZimbraBrowser zimbraBrowser;
     private void initComponents() {
 
         selfControl = new SelfControl();
-        jDesktopPane1 = new javax.swing.JDesktopPane();
-        jTabbedPane1 = new javax.swing.JTabbedPane();
-        jProgressBar1 = new javax.swing.JProgressBar();
-        jSlider1 = new javax.swing.JSlider();
-        jProgressBar3 = new javax.swing.JProgressBar();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jList1 = new javax.swing.JList();
         jLabel1 = new javax.swing.JLabel();
         jLayeredPane1 = new javax.swing.JLayeredPane();
         Mail = new javax.swing.JPanel();
@@ -53,12 +45,10 @@ ZimbraBrowser zimbraBrowser;
         
         jFormattedTextField1.setVisible(false);
 
-        jScrollPane1.setViewportView(jList1);
-
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);   
            
         Mail.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        Mail.setPreferredSize(new java.awt.Dimension(440, 865));
+        Mail.setPreferredSize(new java.awt.Dimension(440, 660));
         
         
         javax.swing.GroupLayout MailLayout = new javax.swing.GroupLayout(Mail);
@@ -75,24 +65,25 @@ ZimbraBrowser zimbraBrowser;
         zimbraBrowser = new ZimbraBrowser();
         Mail = zimbraBrowser;
         
-        zimbraBrowser.setPreferredSize(new java.awt.Dimension(440, 1100));
+        zimbraBrowser.setPreferredSize(new java.awt.Dimension(440, 1000));
         zimbraBrowser.loadURL("http://mail.asl.org/zimbra/#1");
+        
         Calendar.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        Calendar.setPreferredSize(new java.awt.Dimension(1000, 800));
+        Calendar.setPreferredSize(new java.awt.Dimension(700, 600));
          
         javax.swing.GroupLayout CalendarLayout = new javax.swing.GroupLayout(Calendar);
         Calendar.setLayout(CalendarLayout);
         CalendarLayout.setHorizontalGroup(
             CalendarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGap(0, 698, Short.MAX_VALUE)
         );
         CalendarLayout.setVerticalGroup(
             CalendarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 780, Short.MAX_VALUE)
+            .addGap(0, 598, Short.MAX_VALUE)
         );
         haikuBrowser = new HaikuBrowser();
         Calendar = haikuBrowser;
-        haikuBrowser.setPreferredSize(new java.awt.Dimension(1000,800));
+        haikuBrowser.setPreferredSize(new java.awt.Dimension(1000, 800));
         haikuBrowser.loadURL("http://asl.haikulearning.com/do/account/login");
         
         Username.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
@@ -163,6 +154,7 @@ ZimbraBrowser zimbraBrowser;
                         .addComponent(jButton1)))
                 .addContainerGap())
         );
+        
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -261,8 +253,8 @@ ZimbraBrowser zimbraBrowser;
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new EverydayFrame().setVisible(true);
-                EverydayFrame().setSize(600, 600);
-            }
+
+                            }
         });
     }
 
@@ -271,7 +263,6 @@ ZimbraBrowser zimbraBrowser;
     private javax.swing.JPanel Mail;
     private javax.swing.JPanel Username;
     private javax.swing.JButton jButton1;
-    private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JFormattedTextField jFormattedTextField1;
     private javax.swing.JFrame jFrame1;
     private javax.swing.JLabel jLabel1;
@@ -279,16 +270,8 @@ ZimbraBrowser zimbraBrowser;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLayeredPane jLayeredPane1;
-    private javax.swing.JList jList1;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JProgressBar jProgressBar1;
     private javax.swing.JProgressBar jProgressBar2;
-    private javax.swing.JProgressBar jProgressBar3;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JSlider jSlider1;
-    private javax.swing.JTabbedPane jTabbedPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JToggleButton jToggleButton1;
     // End of variables declaration//GEN-END:variables
 }

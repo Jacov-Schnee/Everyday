@@ -184,10 +184,10 @@ public class ZimbraBrowser extends JPanel {
         SwingUtilities.invokeLater(new Runnable() {
 
             public void run() {
-                HaikuBrowser browser = new HaikuBrowser();
+                ZimbraBrowser browser = new ZimbraBrowser();
                 JFrame window = new JFrame();
-                //Container panel= window.getContentPane();
-                //panel.add(browser);
+                Container panel= window.getContentPane();
+                panel.add(browser);
                 
                 window.pack();
                 window.setVisible(true);
